@@ -1,0 +1,885 @@
+/*___________________________________________ Start Main _____________________________________________*/
+
+*{box-sizing: border-box; user-select: none; }
+body 
+{
+    margin:0;
+	padding:0; 
+    background-color: #eee;
+    perspective: 2000px;
+}
+h1,h3{margin: 0}
+
+/****************** Start Navbar *********************/
+
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-color: #ddd;
+    box-shadow: 0 0 30px 5px  inset #111;
+
+
+}
+.navbar ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-around
+
+}
+.navbar ul li{width: 100%;}
+.navbar ul li img{margin-top: -8px;display: inline-block}
+.navbar ul li a{
+    color: #383232;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: inline-flex;
+    text-align: center;
+    padding-top: 20px;
+    transition: border 1s ;
+}
+.navbar ul li a:hover{
+    animation: rot .6s infinite linear alternate; 
+    border-bottom: 3px solid #444;
+    opacity: 1;
+}
+
+@keyframes rot{
+    0%{transform: rotate(10deg) scale(1.2)}
+    100%{transform: rotate(-10deg) scale(1.2)}
+}
+
+.navbar  .active{color: #ffffff; opacity: .7;transform: scale(1.5)}
+
+    
+/****************** End Navbar *********************/
+
+/*___________________________________________ End Main ________________________________________________*/
+
+
+
+
+
+
+/*___________________________________________ Start Home Page _________________________________________*/
+
+
+/****************** Start Bayrak *********************/
+
+.bayrak img{
+    width: 100%;
+    height: 80%; 
+    
+}
+
+/****************** End Bayrak *********************/
+
+/****************** Start Footer *******************/
+
+footer
+{
+    width: 100%;
+    height: 10%;
+    background-color: #4d4949;
+    box-shadow: 0 0 20px 1px  inset #777575;
+    display: inline-flex;
+    justify-content: space-around;
+    
+}
+footer .imgs{
+    width: 30%;
+    display: inline-flex;
+    justify-content: space-around;
+    
+}
+footer .imgs img{animation: roting 2s infinite ease-in-out;}
+footer .imgs img:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+    opacity: .6;
+}
+footer .info{
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: 50px;
+    margin-left: -160px;
+    color: wheat;
+}
+footer .info span{color: #ff0101; border-bottom: 1px solid red; text-transform: uppercase}
+
+footer .iletisim a{
+    text-decoration: none;
+    color: wheat;
+    font-size: 19px;
+    display: inline-flex;
+    opacity: .6;
+    padding-top: 9px;
+}
+
+footer .iletisim a span{padding-top: 10px}
+footer .iletisim a:hover{
+    position: relative;
+    color: #ffffff;
+    opacity: 1;
+    animation: sceling .7s infinite alternate linear; 
+
+    
+}
+
+   /* animation */ 
+@keyframes roting{
+    0%,100%{transform: rotateY(0)}
+    50%{transform: rotateY(180deg)}
+}
+@keyframes sceling{
+    0%{transform: scale(1)}
+    100%{transform: scale(1.3)}
+}
+/****************** End Footer *******************/
+
+/*___________________________________________ End Home Page ___________________________________________*/
+
+
+
+
+
+
+/*___________________________________________ Start Hakkında Page _____________________________________*/
+.hakkinda_contianr{
+    
+}
+
+/*************************** Start Content ************************/
+
+.hakkinda_contianr .contant{
+    width: 70%;
+    margin: 0 auto;
+    background-color: #ddd;
+    text-align: center;
+    padding: 100px 0;   
+    background-color: 
+}
+
+/***************** Start İnfo ******************/
+
+.hakkinda_contianr .contant .info{
+    width: 50%;
+    height: 50%;
+    border: 1x solid #2ca4ba;
+    margin: auto;
+    
+}
+.hakkinda_contianr .contant .info h1{
+    margin: 0 0 60px 0;
+    color: #16368e;
+    font-size: 25px
+}
+
+/***** Start Left *******/
+.hakkinda_contianr .contant .info .left{
+    width: 35%;
+    height: 90%;
+    float: left
+}
+.hakkinda_contianr .contant .info .left img{width: 100%; height: 100%;}
+/***** End Left *********/
+
+/***** Start Right ******/
+.hakkinda_contianr .contant .right{
+    width: 65%;
+    height: 90%;
+    text-align: left;
+    float: right;
+    padding: 25px;
+    box-shadow: inset 0 0 200px 50px #23235f;
+    color: white;
+    font-size: 20px
+}
+/***** End Right ********/
+
+/***************** End İnfo ******************/
+
+/***************** Start Spor ****************/
+
+.hakkinda_contianr .contant .spor{
+    width: 100%;
+    height: 70%;
+    border: 1x solid #2ca4ba;
+    margin: 50px auto;
+    display: inline-flex;
+    justify-content: space-around;
+
+}
+.hakkinda_contianr .contant  h1{
+    color: #000000;
+    font-size: 25px;
+    margin-top: 250px;
+    flex: none;
+    color: green;
+}
+/***** Start Card *********/
+.hakkinda_contianr .contant .spor .card{
+    width: 310px;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    box-shadow: inset 350px 0 50px rgba(0,0,0,.5); 
+    border: 2px solid green;
+    float: left;
+    transition: 1s;
+    border-radius: 30px;
+}
+.hakkinda_contianr .contant .spor .card:hover{
+    transform: rotate(-10deg);
+    box-shadow: inset 40px 0 50px rgba(0,0,0,.5); 
+    border: 1px solid green;
+}
+.hakkinda_contianr .contant .spor .card .img_box{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #232398;
+    z-index: 1;
+    position: relative;
+    transform-origin: left;
+    transition: 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    border: 1px solid green;
+}
+.hakkinda_contianr .contant .spor .card:hover .img_box{
+    transform: rotateY(-135deg);
+}
+.hakkinda_contianr .contant .spor .card .img_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.hakkinda_contianr .contant .spor .card .detiles{
+    font-size: 20px
+}
+/***** End futbol ***********/
+
+/***************** End Spor ******************/
+.hakkinda_contianr .contant
+.hakkinda_contianr .contant
+.hakkinda_contianr .contant
+.hakkinda_contianr .contant
+.hakkinda_contianr .contant
+
+/*************************** Start Content ************************/
+
+/*___________________________________________ End Hakkında Page _______________________________________*/
+
+
+
+
+
+
+/*___________________________________________ Start OzGecmis Page _____________________________________*/
+    
+
+.ozgecmis_continar{
+    width: 50%;
+    height: 1000px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: -10px 10px 50px  black;
+    
+}
+/****************** Start Up *******************/
+
+.ozgecmis_continar .up{
+    width: 100%;
+    height: 25%;
+    background-color: #0da75a;
+    
+}
+.ozgecmis_continar .up .links{
+    width: 80%;
+    margin: 20px 10%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.ozgecmis_continar .up .links h1{color: white;}
+.ozgecmis_continar .up .links p{color: white ;display: inline}
+
+.ozgecmis_continar .up ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 50%;
+}
+.ozgecmis_continar .up ul li{
+    display: inline-block;
+    border-radius: 40%
+}
+.ozgecmis_continar .up ul li:hover{ transform: scale(1.3);background-color: green}
+
+/****************** End Up ********************/
+
+/****************** Start Bilgi ***************/
+
+.ozgecmis_continar .bilgi{
+    width: 80%;
+    height: 25%;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: inline-flex;
+    border: 1px solid black;
+}
+
+/****** Start Left ********/
+
+.ozgecmis_continar .bilgi .left{width: 40%;height: 100%}
+.ozgecmis_continar .bilgi .left img{width: 100%;height: 100.7%;border-right: 1px solid black;}
+
+/****** End Left **********/
+
+/****** Start Right *******/
+
+.ozgecmis_continar .bilgi .right{
+    width: 60%;
+    height: 100%;
+}
+
+.ozgecmis_continar .bilgi .right h1{
+    text-align: center;
+    color: darkgreen;
+    letter-spacing: 5px;
+    height: 10%
+}
+.ozgecmis_continar .bilgi p{padding-left: 10px;font-size: 15px;height: 5%}
+
+
+.ozgecmis_continar .bilgi table{height: 60%}
+
+
+.ozgecmis_continar .bilgi .right ul{
+    list-style: none;
+    width: 100%;
+    margin-top: -7px;
+    height: 13%;
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 0;
+    padding-top: 3px;
+    background-color: #34c734;
+    
+}
+.ozgecmis_continar .bilgi .right ul li:hover{ transform: scale(1.3)}
+
+
+/****** End Right **********/
+
+
+/****************** End Bilgi ********************/
+
+/****************** Start Continar2 ***********/
+
+.ozgecmis_continar .continar2{
+    width: 100%;
+    height: 80%;
+    background-color: #e3e3e3;
+}
+/******* Start Header ***********/
+.ozgecmis_continar .continar2  h1{
+    padding-top: 30%;
+    padding-bottom: 6%;
+    margin: 0;
+    text-align: center;
+    color: darkgreen
+}
+/******* End Header *************/
+
+/******* Start Okullar **********/
+
+.ozgecmis_continar .continar2  .okullar{
+    width: 80%;
+    height: 60%;
+    margin:  auto;
+    position: relative;
+    text-align: center;
+}
+/*** Start Okul Kutusu ******/
+.ozgecmis_continar .continar2  .okullar .ilk_okul,.orta_okul,.lise_okul,.uni{
+    width: 47%;
+    height: 25%;
+    box-shadow: -10px 10px 10px 5px #504f4f;
+    position: relative;
+    background-color: aliceblue;
+}
+.ozgecmis_continar .continar2  .okullar .orta_okul{margin-left: 55%;box-shadow: 10px 10px 10px 5px #504f4f;}
+.ozgecmis_continar .continar2  .okullar .uni{margin-left: 55%; box-shadow: 10px 10px 10px 5px #504f4f;}
+
+.ozgecmis_continar .continar2  .okullar .ilk_okul:before{
+    content: "";
+    position:absolute;
+    right: -20;
+    top: 20;
+    border-left: 10px solid aliceblue;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+.ozgecmis_continar .continar2  .okullar .orta_okul:before{
+    content: "";
+    position:absolute;
+    left: -20;
+    top: 20;
+    border-right: 10px solid aliceblue;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+.ozgecmis_continar .continar2  .okullar .lise_okul:before{
+    content: "";
+    position:absolute;
+    right: -20;
+    top: 20;
+    border-left: 10px solid aliceblue;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+.ozgecmis_continar .continar2  .okullar .uni:before{
+    content: "";
+    position:absolute;
+    left: -20;
+    top: 20;
+    border-right: 10px solid aliceblue;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+.ozgecmis_continar .continar2  .okullar h3{color: #068606}
+.ozgecmis_continar .continar2  .okullar p{color: #068606;}
+.ozgecmis_continar .continar2  .okullar span{
+    background-color: #027b02;
+    color: #ffffff;
+    text-align:left;
+    padding: 2px;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px; 
+    margin-left: -120px; 
+}
+.ozgecmis_continar .continar2  .okullar span:after{
+    content: "";
+    position: absolute;
+    border-left: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #027b02;
+    border-bottom: 7px solid  #027b02;
+    top: -13;
+    right: 0;
+}
+.ozgecmis_continar .continar2  .okullar span span{font-size: 15px}
+
+/*** End Okul Kutusu ******/
+
+/*** Start Ortadaki Direk */
+
+.ozgecmis_continar .continar2 .okullar .direk{
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: aliceblue;
+}
+.ozgecmis_continar .continar2  .okullar .direk p{
+    width: 200%;
+    height: 2%;
+    border-radius: 50%;
+    left: 0;
+    background-color: darkgreen;
+    position: absolute
+}
+.ozgecmis_continar .continar2  .okullar .direk p:first-of-type{top: 15}
+.ozgecmis_continar .continar2  .okullar .direk p:nth-of-type(2){top: 135}
+.ozgecmis_continar .continar2  .okullar .direk p:nth-of-type(3){top: 255}
+.ozgecmis_continar .continar2  .okullar .direk p:last-of-type{top: 375}
+
+/* End Ortadaki Direk */
+
+/******* End Okullar **********/
+
+/******* Start Part2 **********/
+
+.ozgecmis_continar .continar2 .part2{
+    
+}
+
+/******* End Part2 **********/
+
+/****************** End Continar2 *************/
+
+/*___________________________________________ End OzGecmis Page _______________________________________*/
+
+
+
+
+
+
+/*___________________________________________ Start Sehirim Page ______________________________________*/
+
+/****************************** Start Continar ******************************/
+
+.sehirimiz_continar{
+    width: 80%;
+    height: 300%;
+    background-color: #ddd;
+    margin: 0 auto 0;
+    box-shadow: 0 0 20px 10px inset;
+    padding: 20px 50px;
+    
+}
+.sehirimiz_continar h1{
+    font-size: 30px;
+    font-family: cursive;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 2% 0 5%;
+    color: #2d2e2c
+}
+/****************** Start Slider *******************/
+
+.sehirimiz_continar .slider{
+    width: 30%;
+    height: 20%;
+    border-radius: 20%;
+    overflow: hidden; 
+    border: 4px solid #333;
+    display: inline-block;
+}
+.sehirimiz_continar .slider ul{
+    width: 400%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sehirimiz_continar .slider ul li{
+    display: inline-block;
+    float: left;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+    animation: sliding infinite 15s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+.sehirimiz_continar .slider ul li img{width: 100%;height: 82%}
+.sehirimiz_continar .slider ul li h3{
+
+    height: 10%;
+    bottom: 0;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.sehirimiz_continar .slider .secilen{
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+.sehirimiz_continar .slider  .secilen div{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    left: 0;
+    background-color: #60666c;
+    position: relative;
+}
+.sehirimiz_continar .slider  .secilen div:first-of-type{animation: active1 infinite 15s ease-in-out}
+.sehirimiz_continar .slider  .secilen div:nth-of-type(2){animation: active2 infinite 15s ease-in-out}
+.sehirimiz_continar .slider  .secilen div:nth-of-type(3){animation: active3 infinite 15s ease-in-out}
+.sehirimiz_continar .slider  .secilen div:last-of-type{animation: active4 infinite 15s ease-in-out}
+
+
+
+    /* Start animation */
+
+@keyframes sliding{
+    
+    0%,12.5%{left: 0;}
+    15%,27.5%{left: -25%;}
+    30%,42.5%{left: -50%;}
+    
+    45%,57.5%{left: -75%;}
+    
+    60%,72.5%{left: -50%;}
+    75%,87.5%{left: -25%;}
+    90%,100%{left: 0;}
+    
+}
+@keyframes active1{
+    0%,12.5%{background-color:limegreen}
+    15%,27.5%{background-color: #60666c}
+    30%,42.5%{background-color: #60666c}
+    
+    45%,57.5%{background-color: #60666c}
+    
+    60%,72.5%{background-color: #60666c}
+    75%,87.5%{background-color: #60666c}
+    90%,100%{background-color:limegreen}
+}   
+@keyframes active2{
+    0%,12.5%{background-color: #60666c}
+    15%,27.5%{background-color:limegreen}
+    30%,42.5%{background-color: #60666c}
+    
+    45%,57.5%{background-color: #60666c}
+    
+    60%,72.5%{background-color: #60666c}
+    75%,87.5%{background-color:limegreen}
+    90%,100%{background-color: #60666c}
+}
+@keyframes active3{
+    0%,12.5%{background-color: #60666c}
+    15%,27.5%{background-color: #60666c}
+    30%,42.5%{background-color:limegreen}
+    
+    45%,57.5%{background-color: #60666c}
+    
+    60%,72.5%{background-color:limegreen}
+    75%,87.5%{background-color: #60666c}
+    90%,100%{background-color: #60666c}
+}
+@keyframes active4{
+    0%,12.5%{background-color:#60666c}
+    15%,27.5%{background-color: #60666c}
+    30%,42.5%{background-color: #60666c}
+    
+    45%,57.5%{background-color:limegreen}
+    
+    60%,72.5%{background-color: #60666c}
+    75%,87.5%{background-color: #60666c}
+    90%,100%{background-color: #60666c}
+}
+
+
+    /* End animation */
+
+/****************** End Slider ***********************/
+
+/****************** Start Hakkinda *******************/
+
+.sehirimiz_continar .hakkinda{
+    width: 60%;
+    height: 20%;
+    border-radius: 20px;
+    background: url(../images/hakkinda.jpg);
+    background-size:cover;
+    color: white;
+    float: right;
+    padding: 15px 40px;
+}
+.sehirimiz_continar .hakkinda h2{
+    font-size: 20px;
+    border-bottom: 3px solid gray;
+    width: 140px;
+    margin-left: 40px;
+    color: #b1b0b0;
+}
+.sehirimiz_continar .hakkinda p{
+    font-size: 18px;
+    word-spacing: 10px;
+}
+/****************** End Hakkinda *******************/
+
+/****************** Start Tanitim ********************/
+.sehirimiz_continar .tanitim{
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 10%;
+    width: 100%;
+    height: 65%;
+    clear: both;
+    padding: 2%;
+    font-size: 17px;
+    
+}
+.sehirimiz_continar .tanitim > div{
+    width: 100%;
+    height: 22.5%;
+    margin-top: 2%;
+    
+    display: inline-flex;
+
+}
+.sehirimiz_continar .tanitim .kale{
+    box-shadow:  0 0 20px 10px  #060a27 ;
+    background: url(../images/kale_arka-plan.jpg);
+    background-size: cover 
+}
+.sehirimiz_continar .tanitim .cami{
+    box-shadow:  0 0 20px 10px  #032f08 ;
+    background: url(../images/cami_arka_plan.jpg);
+    background-size: cover 
+}
+.sehirimiz_continar .tanitim .carsi{
+    box-shadow:  0 0 20px 10px  #353b09 ;
+    background: url(../images/carsi_arka_plan.jpg);
+    background-size: cover;
+}
+.sehirimiz_continar .tanitim .medrese{
+    box-shadow:  0 0 20px 10px  #3c0a33 ;
+    background: url(../images/medrese_arka.jpg);
+    background-size: cover;
+
+}
+
+.sehirimiz_continar .tanitim > div{
+    text-align: center;
+    padding: 20px ;
+    color: aliceblue;
+}
+.sehirimiz_continar .tanitim  h3{
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom-right-radius: 2px solid black;
+}
+.sehirimiz_continar .tanitim > div p{
+    word-spacing: 10px;
+    font-family: monospace;
+    text-transform: capitalize;
+    padding: 5px 20px;
+}
+/****************** End Tanitim *******************/
+
+/****************************** End Continar ********************************/
+
+/*___________________________________________ End Sehirim Page ________________________________________*/
+
+
+
+
+
+/*___________________________________________ Start Mirasimiz Page ____________________________________*/
+
+.mirasimiz_continar{
+    width: 100%;
+    height: 90%;
+    display: inline-flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to bottom, #f6f6f6, #bcbcbc, #848484, #515151, #232323);
+}
+/***************** All cards ********************/
+.mirasimiz_continar .box{
+    width: 22%;
+    height: 60%;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    transform-style: preserve-3d;
+    transition: all .8s ease-in-out;
+    z-index: 2;
+    box-shadow: 0 0 20px 10px #333;
+}
+/******* Box Front *********/
+
+.mirasimiz_continar .front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    z-index: 2;
+    border-radius: 10px;
+}
+/******* Box Back *********/
+
+.mirasimiz_continar .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    z-index: 1;
+    border-radius: 10px;
+}
+.mirasimiz_continar h2{
+    background-color: #333;
+    color: #99aec1;
+    margin: 0;
+    height: 10%;
+    color: #ffffff;
+    font-size: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.mirasimiz_continar img{
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+}   
+.mirasimiz_continar  p{
+    font-size: 18px;
+    font-family: cursive;
+}
+.mirasimiz_continar .muze .back p{font-size: 15px}
+
+.mirasimiz_continar .demirkapi .back{background-image: linear-gradient(to bottom, #14ae42, #34b43d, #49b938, #5bbf32, #6cc42c, #81c527, #94c623, #a5c721, #bac428, #cdc133, #ddbe3f, #ebbb4d);;}
+.mirasimiz_continar .muze .back     {background: -webkit-linear-gradient(top,#4493ff ,#ac38ac)}
+.mirasimiz_continar .makamkapi .back{background: -webkit-linear-gradient(top,#fdb062 ,#fc6b58)}
+/* arak plan rengi */
+.mirasimiz_continar .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: rotate 1s ease-in;
+
+}
+
+/************** Effects ************/
+
+.mirasimiz_continar .box:hover{transform: rotateY(180deg);}
+
+.mirasimiz_continar .box.demirkapi:hover,
+.mirasimiz_continar .box.demirkapi:hover ~ .bg{
+    opacity: 1;
+    background-image: linear-gradient(to right bottom, #76f25c, #00c19c, #0088a1, #244f6b, #232323);
+    
+
+}
+
+.mirasimiz_continar .box.muze:hover,
+.mirasimiz_continar .box.muze:hover ~ .bg{
+    opacity: 1;
+    background-image: linear-gradient(to right bottom, #d859fb, #7786ff, #009dff, #00a7e8, #00aac2, #2f99ae, #3f889a, #477886, #425669, #383745, #231e23, #000000);  
+}
+
+.mirasimiz_continar .box.makamkapi:hover,
+.mirasimiz_continar .box.makamkapi:hover ~ .bg{
+    opacity: 1;
+    background-image: linear-gradient(to right bottom, #dcac3e, #d5973f, #cb8440, #be7142, #ae6143, #9a5241, #85453d, #703938, #542c2e, #391f23, #201416, #000000);
+}
+
+/*___________________________________________ End Mirasimiz Page ______________________________________*/
