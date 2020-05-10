@@ -1,12 +1,16 @@
 /*___________________________________________ Start Main _____________________________________________*/
 
-*{box-sizing: border-box; user-select: none; }
+*{
+    box-sizing: border-box;
+    user-select: none;
+}
 body 
 {
-    margin:0;
+    margin: 0;
 	padding:0; 
     background-color: #eee;
     perspective: 2000px;
+    
 }
 h1,h3{margin: 0}
 
@@ -15,12 +19,10 @@ h1,h3{margin: 0}
 
 .navbar{
     width: 100%;
-    height: 60px;
+    height: 40px;
     text-align: center;
     background-color: #ddd;
     box-shadow: 0 0 30px 5px  inset #111;
-
-
 }
 .navbar ul{
     width: 100%;
@@ -28,36 +30,66 @@ h1,h3{margin: 0}
     padding: 0;
     list-style: none;
     display: inline-flex;
-    justify-content: space-around
+    justify-content: space-around;
 
 }
-.navbar ul li{width: 100%;}
+
 .navbar ul li img{margin-top: -8px;display: inline-block}
 .navbar ul li a{
     color: #383232;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 10px;
     text-transform: uppercase;
     display: inline-flex;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
+    -webkit-transition: border 1s ;
     transition: border 1s ;
+    position: relative;
+}
+.navbar ul li a:before{
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    
 }
 .navbar ul li a:hover{
-    animation: rot .6s infinite linear alternate; 
-    border-bottom: 3px solid #444;
+    animation:  .2s infinite linear alternate; 
     opacity: 1;
+    
 }
+.navbar ul li a:hover:before{animation: border_com .6s 1 linear forwards;}
 
 @keyframes rot{
-    0%{transform: rotate(10deg) scale(1.2)}
-    100%{transform: rotate(-10deg) scale(1.2)}
+    0%{transform: rotate(2deg);}
+    100%{transform: rotate(-2deg);}
+}
+@keyframes border_com{
+    0%{}
+    100%{width: 100%}
 }
 
-.navbar  .active{color: #ffffff; opacity: .7;transform: scale(1.5)}
+.navbar  .active{color: #ffffff; opacity: .7; border-bottom: 3px solid black}
 
     
 /****************** End Navbar *********************/
+
+/****************** Start  Media *********************/
+@media all and (max-width: 720px){
+    .navbar{height: 90px;}
+    .navbar ul{flex-wrap: wrap;}
+    .navbar ul li{width: 200px;flex-wrap: wrap;}
+}
+@media all and (max-width: 620px){
+    .navbar{height: 120px;}
+    .navbar ul{flex-wrap: wrap;}
+    .navbar ul li{width: 200px;flex-wrap: wrap;}
+}
+
+/****************** End Media *********************/
 
 /*___________________________________________ End Main ________________________________________________*/
 
@@ -66,63 +98,231 @@ h1,h3{margin: 0}
 
 
 
-/*___________________________________________ Start Home Page _________________________________________*/
 
 
-/****************** Start Bayrak *********************/
 
-.bayrak img{
-    width: 100%;
-    height: 80%; 
-    
+
+/*___________________________________________ Start Hakkında Page _____________________________________*/
+.hakkinda_contianr{
+   background-color: #cccbcb;
+    height: auto
 }
 
-/****************** End Bayrak *********************/
+/*************************** Start Content ************************/
 
-/****************** Start Footer *******************/
+.hakkinda_contianr .contant{
+    width: 65%;
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom, #e6e5e5, #b4b4b4, #999999, #808080, #7e7b7b);
+    text-align: center;
+    padding: 50px 0;   
+    box-shadow: 0 0 100px 10px inset #8475fc;
+}
 
-footer
+.hakkinda_contianr h1{
+    margin: 0 0 50px;
+    color: green;
+    text-transform: uppercase;
+}
+
+/***************** Start Okul ******************/
+
+.hakkinda_contianr .contant .okul{
+    width: 450px;
+    height: 250px;
+    margin: 0 auto 250px;
+}
+
+
+/***** Start Left *******/
+.hakkinda_contianr .contant .okul .left{
+    width: 35%;
+    height: 90%;
+    float: left
+}
+.hakkinda_contianr .contant .okul .left img{width: 100%; height: 100%;}
+/***** End Left *********/
+
+
+/***** Start Right ******/
+.hakkinda_contianr .contant .okul .right{
+    width: 65%;
+    height: 90%;
+    text-align: left;
+    float: right;
+    padding: 25px;
+    box-shadow: inset 0 0 300px 150px #0e0a36;
+    color: white;
+    font-size: 20px
+}
+/***** End Right ********/
+
+
+/***************** End Okul ******************/
+
+/***************** Start Spor ****************/
+
+.hakkinda_contianr .contant .spor{
+    width: 100%;
+    height: 70%;
+    border: 1x solid #2ca4ba;
+    margin: 50px auto;
+    justify-content: space-around;
+    display: inline-flex;
+
+}
+/********* Strt Card *****/
+.hakkinda_contianr .contant .spor .card{
+    width: 280px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d; 
+    box-shadow: inset 350px 0 50px rgba(0,0,0,.5); 
+    
+    background-color: #eee;
+    border: 2px solid green;
+    float: left;
+    transition: 1s;
+    border-radius: 30px;
+}
+.hakkinda_contianr .contant .spor .card:hover{
+    transform: rotate(-10deg);
+    box-shadow: inset 40px 0 50px rgba(0,0,0,.5); 
+    border: 1px solid green;
+}
+
+/********* Strt İmg *****/
+.hakkinda_contianr .contant .spor .card .img_box{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #232398;
+    z-index: 1;
+    position: relative;
+    transform-origin: left;
+    -webkit-transition: 1s;
+    transition: 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid green;
+    border-radius: 30px;
+}
+.hakkinda_contianr .contant .spor .card:hover .img_box{
+    transform: rotateY(-135deg);
+}
+.hakkinda_contianr .contant .spor .card .img_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/********* Strt Detiles *****/
+.hakkinda_contianr .contant .spor .card .detiles{
+    font-size: 20px
+}
+
+/***************** End Spor ******************/
+
+/***************** Start Etkinlik_Hobi *******/
+
+.hakkinda_contianr .etkinlik_hobi{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto ;
+}
+/***** Start Hobi ******/
+.hakkinda_contianr .hobi{
+    width: 270px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: rotateX(65deg) scale(.8);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    border: 2px solid #242323;
+    color: aliceblue;
+    background-image: linear-gradient(to bottom, #cfcfcf, #b4b4b4, #999999, #808080, #676767);
+}
+.hakkinda_contianr .satranc:hover{background-image: linear-gradient(to bottom, #130716, #1f081a, #2c0719, #380313, #410202);}
+.hakkinda_contianr .berber:hover{background-image: linear-gradient(to bottom, #071608, #0a200a, #092b0a, #053607, #024102);;}
+.hakkinda_contianr .games:hover{background-image: linear-gradient(to bottom, #070a16, #080c21, #070e2c, #040f37, #020f41);}
+
+.hakkinda_contianr .hobi:hover{transform: rotateX(0) scale(1); }
+.hakkinda_contianr .hobi:hover .info{opacity: 1;color: white;}
+
+/***** Start İmgs ********/
+.hakkinda_contianr .hobi .imgs{
+    width: 100%;
+    height: 45%;
+}
+.hakkinda_contianr .hobi .imgs img{width: 100%; height: 100%;}
+
+/***** Start İnfo ********/
+.hakkinda_contianr .hobi .info{
+    width: 100%;
+    height: 55%;
+    text-align: left;
+    padding: 15 30px;
+    font-size: 17px;
+    color: black;
+    opacity: .4;
+    -webkit-transition: all 1s ease-in-out; 
+    transition: all 1s ease-in-out; 
+    
+}
+.hakkinda_contianr .hobi .info h2{margin: 0}
+/****************** End Etkinlik_Hobi ********/
+
+/****************** Start Footer *************/
+
+.hakkinda_contianr footer
 {
     width: 100%;
-    height: 10%;
-    background-color: #4d4949;
-    box-shadow: 0 0 20px 1px  inset #777575;
+    height: 60px;
+    background-color: #0b1b3e;
+    box-shadow: 0 0 30px 1px  inset #8186f8;
+    display: inline-flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: -50;
+    
+}
+.hakkinda_contianr footer .imgs{
+    width: auto;
     display: inline-flex;
     justify-content: space-around;
     
 }
-footer .imgs{
-    width: 30%;
-    display: inline-flex;
-    justify-content: space-around;
-    
-}
-footer .imgs img{animation: roting 2s infinite ease-in-out;}
-footer .imgs img:hover{
+.hakkinda_contianr footer .imgs img{animation: roting 2s infinite ease-in-out; width: 25px}
+.hakkinda_contianr footer .imgs img:hover{
     animation-play-state: paused;
     cursor: pointer;
     opacity: .6;
 }
-footer .info{
+.hakkinda_contianr footer .info{
     text-transform: capitalize;
     font-size: 15px;
-    line-height: 50px;
-    margin-left: -160px;
+    line-height: 50px;  
     color: wheat;
+    width: auto;
 }
-footer .info span{color: #ff0101; border-bottom: 1px solid red; text-transform: uppercase}
-
-footer .iletisim a{
+.hakkinda_contianr footer .info span{color: #ff0101; border-bottom: 1px solid red; text-transform: uppercase}
+.hakkinda_contianr footer .iletisim{width: auto}
+.hakkinda_contianr footer .iletisim a{
     text-decoration: none;
     color: wheat;
     font-size: 19px;
     display: inline-flex;
     opacity: .6;
     padding-top: 9px;
+    margin-right: 50px
 }
 
-footer .iletisim a span{padding-top: 10px}
-footer .iletisim a:hover{
+.hakkinda_contianr footer .iletisim a span{padding-top: 10px}
+.hakkinda_contianr footer .iletisim a:hover{
     position: relative;
     color: #ffffff;
     opacity: 1;
@@ -140,144 +340,41 @@ footer .iletisim a:hover{
     0%{transform: scale(1)}
     100%{transform: scale(1.3)}
 }
-/****************** End Footer *******************/
-
-/*___________________________________________ End Home Page ___________________________________________*/
+/****************** End Footer ***************/
 
 
+/*************************** End Content ************************/
 
-
-
-
-/*___________________________________________ Start Hakkında Page _____________________________________*/
-.hakkinda_contianr{
-    
+/****************** Start  Media *********************/
+@media all and (max-width: 885px){
+    .hakkinda_contianr footer{ height: 130px;flex-direction: column}
 }
-
-/*************************** Start Content ************************/
-
-.hakkinda_contianr .contant{
-    width: 70%;
-    margin: 0 auto;
-    background-color: #ddd;
-    text-align: center;
-    padding: 100px 0;   
-    background-color: 
+@media all and (max-width: 720px){
+    .hakkinda_contianr .contant .okul{
+        width: 350px;
+        height: 300px;
+    }
+    .hakkinda_contianr .contant .spor .card{
+        width: 45%;
+    }
 }
-
-/***************** Start İnfo ******************/
-
-.hakkinda_contianr .contant .info{
-    width: 50%;
-    height: 50%;
-    border: 1x solid #2ca4ba;
-    margin: auto;
-    
+@media all and (max-width: 620px){
+    .hakkinda_contianr .contant .okul{width: 300px; height: 330px;}
+    .hakkinda_contianr .contant .spor{height: 500px}
+    .hakkinda_contianr .contant .spor .card{width: 45%; word-break:break-all;}
+    .hakkinda_contianr .contant{height: 2800px;}
+    .hakkinda_contianr .hobi {margin-bottom: 20px;;height: 350px;transform: rotateX(40deg)}
+    .hakkinda_contianr .games{margin-top: 40px;}
+    .hakkinda_contianr footer{ height: 200px;flex-direction: column}
+    .hakkinda_contianr footer .imgs{}
 }
-.hakkinda_contianr .contant .info h1{
-    margin: 0 0 60px 0;
-    color: #16368e;
-    font-size: 25px
-}
-
-/***** Start Left *******/
-.hakkinda_contianr .contant .info .left{
-    width: 35%;
-    height: 90%;
-    float: left
-}
-.hakkinda_contianr .contant .info .left img{width: 100%; height: 100%;}
-/***** End Left *********/
-
-/***** Start Right ******/
-.hakkinda_contianr .contant .right{
-    width: 65%;
-    height: 90%;
-    text-align: left;
-    float: right;
-    padding: 25px;
-    box-shadow: inset 0 0 200px 50px #23235f;
-    color: white;
-    font-size: 20px
-}
-/***** End Right ********/
-
-/***************** End İnfo ******************/
-
-/***************** Start Spor ****************/
-
-.hakkinda_contianr .contant .spor{
-    width: 100%;
-    height: 70%;
-    border: 1x solid #2ca4ba;
-    margin: 50px auto;
-    display: inline-flex;
-    justify-content: space-around;
-
-}
-.hakkinda_contianr .contant  h1{
-    color: #000000;
-    font-size: 25px;
-    margin-top: 250px;
-    flex: none;
-    color: green;
-}
-/***** Start Card *********/
-.hakkinda_contianr .contant .spor .card{
-    width: 310px;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    box-shadow: inset 350px 0 50px rgba(0,0,0,.5); 
-    border: 2px solid green;
-    float: left;
-    transition: 1s;
-    border-radius: 30px;
-}
-.hakkinda_contianr .contant .spor .card:hover{
-    transform: rotate(-10deg);
-    box-shadow: inset 40px 0 50px rgba(0,0,0,.5); 
-    border: 1px solid green;
-}
-.hakkinda_contianr .contant .spor .card .img_box{
-    width: 100%;
-    height: 100%;
-    border: 1px solid #232398;
-    z-index: 1;
-    position: relative;
-    transform-origin: left;
-    transition: 1s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 30px;
-    border: 1px solid green;
-}
-.hakkinda_contianr .contant .spor .card:hover .img_box{
-    transform: rotateY(-135deg);
-}
-.hakkinda_contianr .contant .spor .card .img_box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-}
-
-.hakkinda_contianr .contant .spor .card .detiles{
-    font-size: 20px
-}
-/***** End futbol ***********/
-
-/***************** End Spor ******************/
-.hakkinda_contianr .contant
-.hakkinda_contianr .contant
-.hakkinda_contianr .contant
-.hakkinda_contianr .contant
-.hakkinda_contianr .contant
-
-/*************************** Start Content ************************/
+/****************** End Media *********************/
 
 /*___________________________________________ End Hakkında Page _______________________________________*/
+
+
+
+
 
 
 
@@ -290,10 +387,9 @@ footer .iletisim a:hover{
 .ozgecmis_continar{
     width: 50%;
     height: 1000px;
-    margin: 0 auto;
+    margin: 1 auto;
     position: relative;
-    box-shadow: -10px 10px 50px  black;
-    
+    box-shadow: -10px 10px 50px  black;  
 }
 /****************** Start Up *******************/
 
@@ -359,26 +455,23 @@ footer .iletisim a:hover{
 .ozgecmis_continar .bilgi .right h1{
     text-align: center;
     color: darkgreen;
-    letter-spacing: 5px;
-    height: 10%
+    height: 10%;
 }
-.ozgecmis_continar .bilgi p{padding-left: 10px;font-size: 15px;height: 5%}
+.ozgecmis_continar .bilgi p{padding-left: 10px;font-size: 15px;height: 10%}
 
 
-.ozgecmis_continar .bilgi table{height: 60%}
+.ozgecmis_continar .bilgi table{height: 50%}
 
 
 .ozgecmis_continar .bilgi .right ul{
     list-style: none;
     width: 100%;
-    margin-top: -7px;
-    height: 13%;
+    height: 10%;
+    height: auto;
     display: inline-flex;
     justify-content: space-around;
     padding: 0;
-    padding-top: 3px;
-    background-color: #34c734;
-    
+    background-color: #34c734;    
 }
 .ozgecmis_continar .bilgi .right ul li:hover{ transform: scale(1.3)}
 
@@ -526,9 +619,101 @@ footer .iletisim a:hover{
 
 /******* End Part2 **********/
 
-/****************** End Continar2 *************/
+/****************** Start Footer *************/
+
+.ozgecmis_continar .continar2 footer
+{
+    width: 100%;
+    height: 60px;
+    background-color: #1c4620;
+    box-shadow: 0 0 30px 1px  inset #bcdebf;
+    display: inline-flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: -50;
+    
+}
+.ozgecmis_continar .continar2 footer .imgs{
+    width: 200px;
+    display: inline-flex;
+    justify-content: space-around;
+    
+}
+.ozgecmis_continar .continar2 footer .imgs img{animation: roting 2s infinite ease-in-out; width: 25px}
+.ozgecmis_continar .continar2 footer .imgs img:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+    opacity: .6;
+}
+.ozgecmis_continar .continar2 footer .info{
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: 50px;  
+    color: wheat;
+}
+.ozgecmis_continar .continar2 footer .info span{color: #ff0101; border-bottom: 1px solid red; text-transform: uppercase}
+
+.ozgecmis_continar .continar2 footer .iletisim a{
+    text-decoration: none;
+    color: wheat;
+    font-size: 19px;
+    display: inline-flex;
+    opacity: .6;
+    padding-top: 9px;
+    margin-right: 50px
+}
+
+.ozgecmis_continar .continar2 footer .iletisim a span{padding-top: 10px}
+.ozgecmis_continar .continar2 footer .iletisim a:hover{
+    position: relative;
+    color: #ffffff;
+    opacity: 1;
+    animation: sceling .7s infinite alternate linear; 
+
+    
+}
+
+   /* animation */ 
+@keyframes roting{
+    0%,100%{transform: rotateY(0)}
+    50%{transform: rotateY(180deg)}
+}
+@keyframes sceling{
+    0%{transform: scale(1)}
+    100%{transform: scale(1.3)}
+}
+/****************** End Footer ***************/
+
+/****************** End Continar2 ************/
+
+/****************** Start Media **************/
+@media all and (max-width: 1125px){
+    .ozgecmis_continar .bilgi .right{overflow: auto;}
+}
+@media all and (max-width: 885px){
+    .ozgecmis_continar .continar2 footer{ height: 130px;flex-direction: column}
+    
+}
+@media all and (max-width:680px){
+    .ozgecmis_continar .continar2  h1{padding-top: 40%}
+}
+@media all and (max-width:620px){
+    .ozgecmis_continar .bilgi{top: 12%;height: 30%}
+    .ozgecmis_continar .bilgi .left{display: none}
+    .ozgecmis_continar .bilgi .right{width: 100%;word-break: break-all}
+    .ozgecmis_continar .bilgi  p{display: none}
+    .ozgecmis_continar .continar2  h1{padding-top: 80%}
+    .ozgecmis_continar .continar2 footer{ height: 200px;flex-direction: column}
+}
+
+
+/****************** End Media ****************/
 
 /*___________________________________________ End OzGecmis Page _______________________________________*/
+
+
+
+
 
 
 
@@ -545,7 +730,7 @@ footer .iletisim a:hover{
     background-color: #ddd;
     margin: 0 auto 0;
     box-shadow: 0 0 20px 10px inset;
-    padding: 20px 50px;
+    padding: 20px 50px 0;
     
 }
 .sehirimiz_continar h1{
@@ -693,6 +878,7 @@ footer .iletisim a:hover{
     color: white;
     float: right;
     padding: 15px 40px;
+    overflow: auto;
 }
 .sehirimiz_continar .hakkinda h2{
     font-size: 20px;
@@ -723,9 +909,11 @@ footer .iletisim a:hover{
     width: 100%;
     height: 22.5%;
     margin-top: 2%;
-    
     display: inline-flex;
-
+    text-align: center;
+    padding: 20px ;
+    color: aliceblue;
+    position: relative;
 }
 .sehirimiz_continar .tanitim .kale{
     box-shadow:  0 0 20px 10px  #060a27 ;
@@ -748,12 +936,6 @@ footer .iletisim a:hover{
     background-size: cover;
 
 }
-
-.sehirimiz_continar .tanitim > div{
-    text-align: center;
-    padding: 20px ;
-    color: aliceblue;
-}
 .sehirimiz_continar .tanitim  h3{
     color: black;
     font-size: 20px;
@@ -768,9 +950,100 @@ footer .iletisim a:hover{
 }
 /****************** End Tanitim *******************/
 
+/****************** Start Footer ******************/
+
+.sehirimiz_continar footer
+{
+    width: 110%;
+    height: 3%;
+    background-color: #9c9ea2;
+    box-shadow: 0 0 30px 1px  inset #000000;
+    display: inline-flex;
+    justify-content: space-around;
+    position: relative;
+    left: -50;
+    bottom: -10
+    
+}
+.sehirimiz_continar footer .imgs{
+    width: 200px;
+    display: inline-flex;
+    justify-content: space-around;
+    
+}
+.sehirimiz_continar footer .imgs img{animation: roting 2s infinite ease-in-out; width: 25px}
+.sehirimiz_continar footer .imgs img:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+    opacity: .6;
+}
+.sehirimiz_continar footer .info{
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: 50px;  
+    color: wheat;
+}
+.sehirimiz_continar footer .info span{color: #ff0101; border-bottom: 1px solid red; text-transform: uppercase}
+
+.sehirimiz_continar footer .iletisim a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 19px;
+    display: inline-flex;
+    opacity: .6;
+    padding-top: 9px;
+    margin-right: 50px
+}
+
+.sehirimiz_continar footer .iletisim a span{padding-top: 10px}
+.sehirimiz_continar footer .iletisim a:hover{
+    position: relative;
+    color: #ffffff;
+    opacity: 1;
+    animation: sceling .7s infinite alternate linear; 
+
+    
+}
+
+   /* animation */ 
+@keyframes roting{
+    0%,100%{transform: rotateY(0)}
+    50%{transform: rotateY(180deg)}
+}
+@keyframes sceling{
+    0%{transform: scale(1)}
+    100%{transform: scale(1.3)}
+}
+/****************** End Footer ***************/
+
+/****************** Start Media ***************/
+@media all and (max-width: 1310px){   
+    .sehirimiz_continar{height: 2300px}
+    .sehirimiz_continar .tanitim > div{ height: 700px;flex-direction: column}
+    .sehirimiz_continar .tanitim > div img{width: 30%;}
+    .sehirimiz_continar .tanitim > div .ikincifoto{position: absolute;top: 25;right: 25;  width: 30%;}
+    .sehirimiz_continar footer{bottom: -70}
+}
+@media all and (max-width: 885px){
+    .sehirimiz_continar footer{ height: 130px;flex-direction: column;bottom: 50;left: -40;width: 113%;bottom: 0}
+}
+@media all and (max-width: 650px){
+    .sehirimiz_continar .hakkinda h2{margin-left: -10px}
+}
+@media all and (max-width: 620px){
+    .sehirimiz_continar footer{ height: 120px;bottom: -130;flex-direction: column;width: 130%}
+}
+
+/****************** End Media ***************/    
+
 /****************************** End Continar ********************************/
 
 /*___________________________________________ End Sehirim Page ________________________________________*/
+
+
+
+
+
 
 
 
@@ -780,7 +1053,7 @@ footer .iletisim a:hover{
 
 .mirasimiz_continar{
     width: 100%;
-    height: 90%;
+    height: 93.5%;
     display: inline-flex;
     justify-content: space-around;
     position: relative;
@@ -820,6 +1093,7 @@ footer .iletisim a:hover{
     transform: rotateY(180deg);
     z-index: 1;
     border-radius: 10px;
+    overflow-y: auto;
 }
 .mirasimiz_continar h2{
     background-color: #333;
@@ -837,10 +1111,10 @@ footer .iletisim a:hover{
     border-radius: 10px;
 }   
 .mirasimiz_continar  p{
-    font-size: 18px;
+    font-size: 12px;
     font-family: cursive;
 }
-.mirasimiz_continar .muze .back p{font-size: 15px}
+.mirasimiz_continar .muze .back p{font-size: 12px}
 
 .mirasimiz_continar .demirkapi .back{background-image: linear-gradient(to bottom, #14ae42, #34b43d, #49b938, #5bbf32, #6cc42c, #81c527, #94c623, #a5c721, #bac428, #cdc133, #ddbe3f, #ebbb4d);;}
 .mirasimiz_continar .muze .back     {background: -webkit-linear-gradient(top,#4493ff ,#ac38ac)}
@@ -858,7 +1132,7 @@ footer .iletisim a:hover{
 
 }
 
-/************** Effects ************/
+/************** Start Effects ************/
 
 .mirasimiz_continar .box:hover{transform: rotateY(180deg);}
 
@@ -881,5 +1155,19 @@ footer .iletisim a:hover{
     opacity: 1;
     background-image: linear-gradient(to right bottom, #dcac3e, #d5973f, #cb8440, #be7142, #ae6143, #9a5241, #85453d, #703938, #542c2e, #391f23, #201416, #000000);
 }
+
+/************** End Effects ************/
+
+/************** Start Media ************/
+@media all and (max-width: 915px){
+    .mirasimiz_continar .box p{font-size: 20px}
+    .mirasimiz_continar{flex-direction: column; height: 1500px}
+    .mirasimiz_continar .box{width: 50%;height: 70%; margin: 20px auto;}
+}
+@media all and (max-width: 720px){
+    
+}
+/************** End Media ************/
+
 
 /*___________________________________________ End Mirasimiz Page ______________________________________*/
